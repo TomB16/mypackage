@@ -1,0 +1,14 @@
+pkgbase = dsf2flac
+	pkgdesc = A utility to convert DSF (DSD) audio files to FLAC (original by hank, updated by dhalsimax)
+	pkgver = 0.4
+	pkgrel = 1
+	url = https://github.com/dhalsimax/dsf2flac
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = flac
+	source = git+https://github.com/dhalsimax/dsf2flac.git
+	sha256sums = SKIP
+
+pkgname = dsf2flac
