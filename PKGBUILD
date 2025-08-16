@@ -13,7 +13,7 @@ source=("git+https://github.com/dhalsimax/dsf2flac.git")
 sha256sums=('SKIP')  # Replace with the actual checksum (run `updpkgsums` later)
 
 build() {
-  cd "$pkgname-$pkgver/build"
+  cd "$srcdir/$pkgname/build"
   sed -i 's/cmake_minimum_required(VERSION 2.6)/cmake_minimum_required(VERSION 3.5)/' ../CMakeLists.txt
 
   cmake .. -Wno-dev
@@ -24,7 +24,7 @@ build() {
 }
 
 package() {
-  cd "$pkgname-$pkgver"
+  cd "$pkgname"
 
   install -Dm755 build/dsf2flac -t "$pkgdir/usr/bin/"
   install -Dm644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
